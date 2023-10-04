@@ -1,0 +1,21 @@
+body {
+    background-color: rgba(0, 104, 0, 0.164);
+}
+.tamanho {
+    width: 80%;
+}
+.margemesquerda {
+    margin-left: 15px;
+}
+.verde {
+    color: rgb(118, 13, 48);
+} 
+.fundoverde {
+    background-color: rgb(106, 77, 87);
+}
+
+.p-3 {
+    
+    color: brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

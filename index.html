@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+< lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mayck Eduardo">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                        <li class="nav-item">
+                            <hr>
+                        </li>
+
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Login
+                        </button>
+
+                        <br>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2">
+                            Cadastro
+                        </button>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Username ou E-mail:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Me lembre</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2">
+                            Cadastro
+                        </button>
+                    <button type="button" class="btn btn-primary" onclick="resultado()">Logar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 02 -->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel2">Cadastre-se</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputText" class="form-label">Nome:</label>
+                            <input type="text" class="form-control" id="exampleInputText" aria-describedby="nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputText2" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="exampleInputText2" aria-describedby="Username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">E-mail:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">Confirme a senha:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Me lembre</label>
+                        </div>
+                
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cadastre-se</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Logar
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function resultado() {
+        alert("Sistema indisponível, tente mais tarde.")
+    }
+</script>
+
+    <!-- CONTEUDO -->
+    <div class="container-fluid flex-column">
+      
+      <div> <div class="container overflow-hidden text-center">
+          <div class="row gx-5">
+            <div class="col">
+             <div class="p-3"><h1>Cardápio do dia</h1></div>
+            </div>
+            <div class="col">
+              <div class="p-3"><h1>Por um ótimo preço!</h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+  </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 m-5 justify-content-between">
+      <div class="col">
+        <div class="card">
+          <img src="img/tacos-2.jpg" class="card-img-top" alt="Tacos">
+          <div class="card-body">
+            <h5 class="card-title">Tacos</h5>
+            <p class="card-text"> Os nossos tacos são a combinação perfeita de sabor e textura, fazendo de cada mordida uma experiência única e deliciosa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/espaguete.avif" class="card-img-top" alt="Espaguete">
+          <div class="card-body">
+            <h5 class="card-title">Espaguete</h5>
+            <p class="card-text">Nosso espaguete é uma obra-prima da cozinha, onde fios de massa perfeitamente cozidos se fundem harmoniosamente com nosso molho caseiro, criando uma experiência gastronômica inigualável.</p>
+          </div>
+        </div>
+      </div>
+
+
+      
+       <!-- TABELA DE INGREDIENTES  -->
+      <table class="table table-striped m-lg-5">
+        <thead>
+          <tr>
+            <th scope="col">Ingredientes</th>
+            <th scope="col">Tacos</th>
+            <th scope="col">Espaguete</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Tortilha</td>
+            <td>Macarrão</td>
+           
+          
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Salsa</td>
+            <td>Carne Moída</td>
+          
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Carne ou frango</td>
+            <td>Molho de Tomate</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+   
+
+</body></html>
